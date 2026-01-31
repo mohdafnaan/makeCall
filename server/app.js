@@ -24,8 +24,7 @@ app.get("/", (req, res) => {
     res.status(500).json(error);
 }
 });
-app.use("/public", publicRoutes);
-app.use(authMiddleware);
+
 app.use("/private", privateRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
